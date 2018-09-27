@@ -1,0 +1,19 @@
+{
+  "name": "start-js",
+  "version": "1.0.0",
+  "description": "starter kit for javascript development",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhserodio/start-js.git"
+  },
+  "author": "jhserodio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhserodio/start-js/issues"
+  },
+  "homepage": "https://github.com/jhserodio/start-js#readme"
+}
