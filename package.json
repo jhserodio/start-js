@@ -4,7 +4,14 @@
   "description": "starter kit for javascript development",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "commit": "git-cz",
+    "release": "standard-version"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "repository": {
     "type": "git",
@@ -15,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/jhserodio/start-js/issues"
   },
-  "homepage": "https://github.com/jhserodio/start-js#readme"
+  "homepage": "https://github.com/jhserodio/start-js#readme",
+  "devDependencies": {
+    "commitizen": "^2.10.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "standard-version": "^4.4.0"
+  }
 }
