@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
+    "precommit": "lint-staged",
+    "eslint": "eslint -c .eslintrc --ext .js src/**",
+    "eslint:fix": "eslint -c .eslintrc --ext .js --fix src/**",
     "commit": "git-cz",
     "release": "standard-version"
   },
@@ -24,8 +27,30 @@
   },
   "homepage": "https://github.com/jhserodio/start-js#readme",
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "commitizen": "^2.10.1",
     "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.7.0",
+    "eslint-plugin-react": "^7.11.0",
+    "husky": "^1.0.1",
+    "lint-staged": "^7.3.0",
+    "prettier": "1.14.3",
     "standard-version": "^4.4.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn run eslint:fix",
+      "git add"
+    ]
   }
 }

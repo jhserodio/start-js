@@ -1,0 +1,7 @@
+*.css
+*.svg
+*.html
+*.test
+package.json
+node_modules/*
+__test__
