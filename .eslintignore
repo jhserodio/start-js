@@ -3,5 +3,7 @@
 *.html
 *.test
 package.json
+scripts/*
+config/*
 node_modules/*
 __test__
