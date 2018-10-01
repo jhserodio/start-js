@@ -8,6 +8,7 @@
     "precommit": "lint-staged",
     "eslint": "eslint -c .eslintrc --ext .js src/**",
     "eslint:fix": "eslint -c .eslintrc --ext .js --fix src/**",
+    "stylelint": "stylelint src/*.css",
     "commit": "git-cz",
     "release": "standard-version"
   },
@@ -47,6 +48,10 @@
     "prettier": "1.14.3",
     "promise": "^8.0.2",
     "standard-version": "^4.4.0",
+    "stylelint": "^9.6.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-declaration-use-variable": "^1.7.0",
+    "stylelint-prettier": "^1.0.2",
     "whatwg-fetch": "^3.0.0"
   },
   "husky": {
@@ -55,6 +60,9 @@
     }
   },
   "lint-staged": {
+    "*.css": [
+      "yarn run stylelint"
+    ],
     "*.js": [
       "yarn run eslint:fix",
       "git add"
