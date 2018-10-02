@@ -8,7 +8,7 @@ const root = document.getElementById('root');
 
 root.innerHTML = `
   <div class="carambolas">
-    Carambolas quadradas never die babe
+    Carambolas quadradas never DIE
   </di>
 `;
 

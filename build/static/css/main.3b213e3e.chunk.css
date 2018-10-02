@@ -1,2 +1,0 @@
-:root{--bg:red;--cl:#00f;--zero:0;--vert:40px;--hor:20px;--bor:2px solid var(--bg)}.ta-ai{background:red;background:var(--bg);color:#00f;color:var(--cl);margin:0;margin:var(--zero);padding:0;padding:var(--zero);height:40px;height:var(--vert);width:20px;width:var(--hor)}.carambolas{border:2px solid red;border:var(--bor)}
-/*# sourceMappingURL=main.3b213e3e.chunk.css.map */

@@ -116,27 +116,32 @@
     "collectCoverageFrom": [
       "src/**/*.js"
     ],
+    "resolver": "jest-pnp-resolver",
     "setupFiles": [
-      "<rootDir>/config/polyfills.js"
+      "react-app-polyfill/jsdom"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.js",
-      "<rootDir>/src/**/?(*.)(spec|test)js"
+      "<rootDir>/src/**/?(*.)(spec|test).js"
     ],
-    "testEnvironment": "node",
+    "testEnvironment": "jsdom",
     "testURL": "http://localhost",
     "transform": {
-      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+      "^(?!.*\\.js$)": "<rootDir>/config/jest/fileTransform.js"
     },
     "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+      "[/\\\\]node_modules[/\\\\].+\\.js$",
+      "^.+\\.module\\.css$"
     ],
+    "moduleNameMapper": {
+      "^.+\\.module\\.css$": "identity-obj-proxy"
+    },
     "moduleFileExtensions": [
       "js",
-      "node",
-      "mjs"
+      "json",
+      "node"
     ]
   },
   "browserslist": [

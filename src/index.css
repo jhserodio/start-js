@@ -4,7 +4,7 @@
     --zero: 0;
     --vert: 40px;
     --hor: 20px;
-    --bor: 2px solid var(--bg);
+    --bor: 2px solid var(--cl);
 }
 
 .ta-ai {
