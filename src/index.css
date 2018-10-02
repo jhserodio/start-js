@@ -1,11 +1,13 @@
-.cara {
+:root {
     --bg: red;
     --cl: blue;
     --zero: 0;
     --vert: 40px;
     --hor: 20px;
     --bor: 2px solid var(--bg);
+}
 
+.ta-ai {
     background: var(--bg);
     color: var(--cl);
     margin: var(--zero);
@@ -14,6 +16,6 @@
     width: var(--hor);
 }
 
-.cara span {
+.carambolas {
     border: var(--bor);
 }

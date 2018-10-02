@@ -1,5 +1,5 @@
-import './index.css';
 import sum from './first';
+import './index.css';
 
 const a = 'init';
 const b = 1;
@@ -7,8 +7,8 @@ const c = sum(2, 4);
 const root = document.getElementById('root');
 
 root.innerHTML = `
-  <div>
-    Carambolas quadradas never die
+  <div class="carambolas">
+    Carambolas quadradas never die babe
   </di>
 `;
 

@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],[function(n,t,o){n.exports=o(3)},function(n,t,o){},,function(n,t,o){"use strict";o.r(t);var e=(n,t)=>n+t;o(1);o.d(t,"a",function(){return r}),o.d(t,"b",function(){return a}),o.d(t,"c",function(){return i});const r="init",a=1,i=e(2,4);document.getElementById("root").innerHTML='\n  <div class="carambolas">\n    Carambolas quadradas never die babe\n  </di>\n'}],[[0,1]]]);
+//# sourceMappingURL=main.cf3d3886.chunk.js.map
