@@ -50,6 +50,10 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
       options: {
         ident: 'postcss',
         plugins: () => [
+          require('postcss-css-variables'),
+          require("postcss-calc"),
+          require('postcss-media-minmax'),
+          require('postcss-custom-media'),
           require('postcss-flexbugs-fixes'),
           require('postcss-preset-env')({
             autoprefixer: {

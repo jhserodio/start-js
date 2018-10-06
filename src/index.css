@@ -1,10 +1,19 @@
+@custom-media --arguma (min-width: 30em);
+
+@custom-media --otra (max-width: calc(30em - 1px));
+
 :root {
     --bg: red;
     --cl: blue;
+    --black: black;
+    --grey: grey;
     --zero: 0;
     --vert: 40px;
     --hor: 20px;
     --bor: 2px solid var(--cl);
+
+    --base: 64em;
+    --min: 40em;
 }
 
 .ta-ai {
@@ -18,4 +27,17 @@
 
 .carambolas {
     border: var(--bor);
+    color: var(--cl);
+}
+
+@media (--arguma) {
+    .carambolas {
+        background: var(--black);
+    }
+}
+
+@media (--otra) {
+    .carambolas {
+        background: var(--grey);
+    }
 }

@@ -20,8 +20,6 @@ const env = getClientEnvironment(publicUrl);
 
 const cssRegex = /\.css$/;
 const cssModuleRegex = /\.module\.css$/;
-const sassRegex = /\.(scss|sass)$/;
-const sassModuleRegex = /\.module\.(scss|sass)$/;
 
 const getStyleLoaders = (cssOptions, preProcessor) => {
   const loaders = [
@@ -35,6 +33,10 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
       options: {
         ident: 'postcss',
         plugins: () => [
+          require('postcss-css-variables'),
+          require("postcss-calc"),
+          require('postcss-media-minmax'),
+          require('postcss-custom-media'),
           require('postcss-flexbugs-fixes'),
           require('postcss-preset-env')({
             autoprefixer: {
@@ -109,11 +111,6 @@ module.exports = {
         include: paths.appSrc,
       },
       {
-        test: /\.mjs$/,
-        include: /node_modules/,
-        type: 'javascript/auto',
-      },
-      {
         oneOf: [
           {
             test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
@@ -181,22 +178,6 @@ module.exports = {
               modules: true,
               getLocalIdent: getCSSModuleLocalIdent,
             }),
-          },
-          {
-            test: sassRegex,
-            exclude: sassModuleRegex,
-            use: getStyleLoaders({ importLoaders: 2 }, 'sass-loader'),
-          },
-          {
-            test: sassModuleRegex,
-            use: getStyleLoaders(
-              {
-                importLoaders: 2,
-                modules: true,
-                getLocalIdent: getCSSModuleLocalIdent,
-              },
-              'sass-loader'
-            ),
           },
           {
             exclude: [/\.js$/, /\.html$/, /\.json$/],
