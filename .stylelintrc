@@ -1,0 +1,34 @@
+{
+  "extends": ["stylelint-prettier/recommended"],
+  "plugins": [
+    "stylelint-prettier",
+    "stylelint-declaration-use-variable"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      true,
+      {
+        "singleQuote": true,
+        "tabWidth": 4,
+      }
+    ],
+    "sh-waqar/declaration-use-variable": [[
+      "/color/",
+      "/border/",
+      "/height/",
+      "/width/",
+      "/animation/",
+      "transform",
+      "transition",
+      "z-index",
+      "font-size",
+      "font-family",
+      "background",
+      "margin",
+      "padding",
+      "transition",
+      "font-weight",
+      "line-height",
+    ]],
+  }
+}

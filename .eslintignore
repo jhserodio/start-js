@@ -1,0 +1,10 @@
+*.css
+*.svg
+*.html
+*.test
+package.json
+scripts/*
+config/*
+build/*
+node_modules/*
+__test__
